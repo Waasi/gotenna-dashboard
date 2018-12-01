@@ -61,6 +61,6 @@ const getMessages = function(db, filter, callback) {
   // Get the documents collection
   const collection = db.collection('messages');
   collection.find(filter).toArray(function(err, messages) {
-    callback(messages);
+    callback(messages.reverse());
   });
 }

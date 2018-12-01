@@ -1,10 +1,13 @@
 html
   head
     title= title
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     script
       include ../js/main.js
   body
-    select(onchange=`filter(value, ${baseUrl})`)
+    br
+    select(onchange=`filter(value, ${baseUrl})`, class="form-control col-md-6")
       option(value="", selected=true, disabled=true)='Filter By Message Type'
       option(value="")= "All Messages"
       option(value="Food")= "Food"
@@ -12,7 +15,15 @@ html
       option(value="Rescue")= "Rescue"
       option(value="Gas")= "Gas"
       option(value="Other")= "Other"
+    br
+    h1= "Feed"
+    hr
     each message in messages
       h2= `[${message.type}] ${message.message}`
       a(href=`https://www.google.com/maps/dir/${message.lat},${message.lon}`, target="_blank")= "Directions"
       p= message.sent
+      hr
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
