@@ -1,6 +1,9 @@
 # GoTenatious Mesh Dashboard
 GoTenatious Mesh emergency feed dashboard
 
+## Requirements
+- Docker
+
 ## Setup
 
 - Copy `example.env` as `.env`
