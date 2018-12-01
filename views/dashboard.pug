@@ -7,7 +7,7 @@ html
       include ../js/main.js
   body
     br
-    select(onchange=`filter(value, ${baseUrl})`, class="form-control col-md-6")
+    select(onchange=`filter(value, "${baseUrl}")`, class="form-control col-md-6")
       option(value="", selected=true, disabled=true)='Filter By Message Type'
       option(value="")= "All Messages"
       option(value="Food")= "Food"
