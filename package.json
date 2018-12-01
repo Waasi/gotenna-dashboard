@@ -1,0 +1,27 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "gotenacious api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gotenacious/dashboard.git"
+  },
+  "author": "Ricardo Mercado <hello@ricardoamercado.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/gotenacious/dashboard/issues"
+  },
+  "homepage": "https://github.com/gotenacious/dashboard#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongodb": "^3.1.10"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}
