@@ -6,6 +6,7 @@ services:
       - mongo
     volumes: 
       - /node_modules
+      - .:/app
     env_file: 
       - .env
     ports:

@@ -1,0 +1,16 @@
+html
+  head
+    title= title
+    script
+      include ../js/filterMessages.js
+  body
+    select(onchange='filter(value)')
+      option(value="", selected=true, disabled=true)='Filter By Message Type'
+      option(value="Food")= "Food"
+      option(value="Medical")= "Medical"
+      option(value="Rescue")= "Rescue"
+      option(value="Gas")= "Gas"
+      option(value="Other")= "Other"
+    each message in messages
+      h2= `[${message.type}] ${message.message}`
+      p= message.sent
