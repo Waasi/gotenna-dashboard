@@ -8,6 +8,7 @@ GoTenatious Mesh emergency feed dashboard
 
 - Copy `example.env` as `.env`
 - Add `MONGO_HOSTNAME` value
+- Add `BASE_URL` value
 - `make build`
 
 ## Run
