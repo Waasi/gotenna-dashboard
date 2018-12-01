@@ -3,11 +3,11 @@ const app = express()
 const port = 3000
 const MongoClient = require('mongodb').MongoClient;
 const url = process.env.MONGO_HOSTNAME; // Connection URL
+const baseUrl = process.env.BASE_URL; // Connection URL
 const dbName = 'gotenacious'; // Database Name
 
 app.use(express.json());
 app.set('view engine', 'pug')
-
 
 app.get('/', (req, res) => { 
 
@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
       getMessages(db, filter, (messages) => {
         client.close()
 
-        res.render('dashboard', { title: 'GoTenatious Mesh Dashboard', messages: messages })
+        res.render('dashboard', { baseUrl: baseUrl, title: 'GoTenatious Mesh Dashboard', messages: messages })
       })
     }
   });

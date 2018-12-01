@@ -2,10 +2,11 @@ html
   head
     title= title
     script
-      include ../js/filterMessages.js
+      include ../js/main.js
   body
-    select(onchange='filter(value)')
+    select(onchange=`filter(value, ${baseUrl})`)
       option(value="", selected=true, disabled=true)='Filter By Message Type'
+      option(value="")= "All Messages"
       option(value="Food")= "Food"
       option(value="Medical")= "Medical"
       option(value="Rescue")= "Rescue"
@@ -13,4 +14,5 @@ html
       option(value="Other")= "Other"
     each message in messages
       h2= `[${message.type}] ${message.message}`
+      a(href=`https://www.google.com/maps/dir/${message.lat},${message.lon}`, target="_blank")= "Directions"
       p= message.sent
