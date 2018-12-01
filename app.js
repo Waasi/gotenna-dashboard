@@ -4,7 +4,7 @@ const port = 3000
 const MongoClient = require('mongodb').MongoClient;
 
 // Connection URL
-const url = 'mongodb://localhost:27017';
+const url = process.env.MONGO_HOSTNAME;
 // Database Name
 const dbName = 'gotenacious';
 app.use(express.json());
