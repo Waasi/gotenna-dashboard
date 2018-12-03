@@ -4,10 +4,10 @@ html
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     script
-      include ../js/main.js
+      include ../../assets/js/main.js
   body
     br
-    select(onchange=`filter(value, "${baseUrl}")`, class="form-control col-md-6")
+    select(onchange=`filter(value, "${baseURL}")`, class="form-control col-md-6")
       option(value="", selected=true, disabled=true)='Filter By Message Type'
       option(value="")= "All Messages"
       option(value="Food")= "Food"

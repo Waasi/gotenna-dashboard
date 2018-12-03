@@ -11,6 +11,7 @@ services:
       - .env
     ports:
       - 3000:3000
+    command: npm run dev
   mongo:
     image: mongo
     ports:
